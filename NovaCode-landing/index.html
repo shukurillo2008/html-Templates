@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-[#0E0E0E] text-white">
+    <div class="grid-pattern"></div>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-4">
+        <div class="container mx-auto px-4">
+            <div class="bg-[#0E0E0E]/40 backdrop-blur-xl rounded-2xl px-6 py-4 border border-white/5 shadow-xl 
+                before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-b before:from-white/5 before:to-transparent before:pointer-events-none
+                relative overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#DCF230]/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="flex justify-between items-center relative">
+                    <div class="text-2xl font-bold text-[#DCF230] logo-text tracking-tighter">NovaCode</div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="transition-colors hover:text-[#DCF230]">Home</a>
+                        <a href="#services" class="transition-colors hover:text-[#DCF230]">Services</a>
+                        <a href="#portfolio" class="transition-colors hover:text-[#DCF230]">Portfolio</a>
+                        <a href="#contact" class="transition-colors hover:text-[#DCF230]">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <img src="./images/nova code 1.png" alt="NovaCode Logo" class="w-10 h-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        Transform Your <span class="text-[#DCF230]">Digital Vision</span> Into Reality
+                    </h1>
+                    <p class="text-lg text-gray-400 mb-8">
+                        We craft innovative digital solutions that help businesses thrive in the modern world.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="flex items-center space-x-4 group">
+                            <div class="contact-icon">
+                                <i class="ph ph-facebook-logo text-2xl text-[#DCF230]"></i>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-[#DCF230] transition-colors">Facebook</span>
+                        </a>
+
+                        <a href="#" class="flex items-center space-x-4 group">
+                            <div class="contact-icon">
+                                <i class="ph ph-twitter-logo text-2xl text-[#DCF230]"></i>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-[#DCF230] transition-colors">Twitter</span>
+                        </a>
+
+                        <a href="#" class="flex items-center space-x-4 group">
+                            <div class="contact-icon">
+                                <i class="ph ph-linkedin-logo text-2xl text-[#DCF230]"></i>
+                            </div>
+                            <span class="text-gray-300 group-hover:text-[#DCF230] transition-colors">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative animate-float" data-aos="fade-left" data-aos-duration="1500">
+                    <img src="./images/nova code 1.png" alt="Hero Image" class="relative rounded-lg w-full hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-[#0E0E0E]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-400">Comprehensive solutions for your business needs</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Web Development Card -->
+                <div class="group bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2" 
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon mb-6">
+                        <i class="ph ph-code text-3xl text-[#DCF230]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 group-hover:text-[#DCF230] transition-colors">Web Development</h3>
+                    <p class="text-gray-400">Custom web solutions built with cutting-edge technologies and modern frameworks.</p>
+                    <div class="mt-6 flex items-center text-[#DCF230] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-medium">Learn More</span>
+                        <i class="ph ph-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Mobile Development Card -->
+                <div class="group bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2" 
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon mb-6">
+                        <i class="ph ph-device-mobile text-3xl text-[#DCF230]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 group-hover:text-[#DCF230] transition-colors">Mobile Development</h3>
+                    <p class="text-gray-400">Native and cross-platform mobile applications for iOS and Android platforms.</p>
+                    <div class="mt-6 flex items-center text-[#DCF230] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-medium">Learn More</span>
+                        <i class="ph ph-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design Card -->
+                <div class="group bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2" 
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon mb-6">
+                        <i class="ph ph-paint-brush text-3xl text-[#DCF230]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 group-hover:text-[#DCF230] transition-colors">UI/UX Design</h3>
+                    <p class="text-gray-400">User-centered design solutions that create engaging and intuitive experiences.</p>
+                    <div class="mt-6 flex items-center text-[#DCF230] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-medium">Learn More</span>
+                        <i class="ph ph-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Cloud Services Card -->
+                <div class="group bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2" 
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon mb-6">
+                        <i class="ph ph-cloud text-3xl text-[#DCF230]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 group-hover:text-[#DCF230] transition-colors">Cloud Services</h3>
+                    <p class="text-gray-400">Scalable cloud solutions and infrastructure management for your business.</p>
+                    <div class="mt-6 flex items-center text-[#DCF230] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-medium">Learn More</span>
+                        <i class="ph ph-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning Card -->
+                <div class="group bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2" 
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon mb-6">
+                        <i class="ph ph-brain text-3xl text-[#DCF230]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 group-hover:text-[#DCF230] transition-colors">AI & Machine Learning</h3>
+                    <p class="text-gray-400">Intelligent solutions powered by advanced AI and machine learning algorithms.</p>
+                    <div class="mt-6 flex items-center text-[#DCF230] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-medium">Learn More</span>
+                        <i class="ph ph-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Card -->
+                <div class="group bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2" 
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon mb-6">
+                        <i class="ph ph-shield-check text-3xl text-[#DCF230]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 group-hover:text-[#DCF230] transition-colors">Cybersecurity</h3>
+                    <p class="text-gray-400">Comprehensive security solutions to protect your digital assets and data.</p>
+                    <div class="mt-6 flex items-center text-[#DCF230] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-sm font-medium">Learn More</span>
+                        <i class="ph ph-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-[#0E0E0E]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Our Portfolio</h2>
+                <p class="text-gray-400">Discover our successful projects and innovations</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://placehold.co/600x400" alt="Project 1" 
+                             class="w-full h-[300px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">E-Commerce Platform</h3>
+                                <p class="text-gray-200 mb-4">Full-stack e-commerce solution with modern UI/UX</p>
+                                <a href="./project-detail.html" class="inline-flex items-center text-[#DCF230] hover:underline">
+                                    View Project
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden">
+                        <img src="https://placehold.co/600x400" alt="Project 2" 
+                             class="w-full h-[300px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">AI Analytics Dashboard</h3>
+                                <p class="text-gray-200 mb-4">Real-time data visualization platform</p>
+                                <a href="./project-detail.html" class="inline-flex items-center text-[#DCF230] hover:underline">
+                                    View Project
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden">
+                        <img src="https://placehold.co/600x400" alt="Project 3" 
+                             class="w-full h-[300px] object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">Mobile Banking App</h3>
+                                <p class="text-gray-200 mb-4">Secure and intuitive financial application</p>
+                                <a href="./project-detail.html" class="inline-flex items-center text-[#DCF230] hover:underline">
+                                    View Project
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="relative">
+                <!-- Content -->
+                <div class="relative rounded-2xl p-2">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-4xl font-bold mb-4">Our Growth in Numbers</h2>
+                        <p class="text-gray-400">Milestones that define our journey</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <!-- Projects Completed -->
+                        <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stats-icon mb-4">
+                                <i class="ph ph-check-circle text-xl text-[#DCF230]"></i>
+                            </div>
+                            <div class="text-4xl font-bold text-[#DCF230] mb-2">
+                                <span class="counter" data-target="100">0</span>+
+                            </div>
+                            <div class="text-gray-400">Projects<br/>Completed</div>
+                        </div>
+
+                        <!-- Happy Clients -->
+                        <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stats-icon mb-4">
+                                <i class="ph ph-users text-xl text-[#DCF230]"></i>
+                            </div>
+                            <div class="text-4xl font-bold text-[#DCF230] mb-2">
+                                <span class="counter" data-target="50">0</span>+
+                            </div>
+                            <div class="text-gray-400">Happy<br/>Clients</div>
+                        </div>
+
+                        <!-- Years Experience -->
+                        <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stats-icon mb-4">
+                                <i class="ph ph-medal text-xl text-[#DCF230]"></i>
+                            </div>
+                            <div class="text-4xl font-bold text-[#DCF230] mb-2">
+                                <span class="counter" data-target="5">0</span>+
+                            </div>
+                            <div class="text-gray-400">Years<br/>Experience</div>
+                        </div>
+
+                        <!-- Team Members -->
+                        <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+                            <div class="stats-icon mb-4">
+                                <i class="ph ph-user-circle-plus text-xl text-[#DCF230]"></i>
+                            </div>
+                            <div class="text-4xl font-bold text-[#DCF230] mb-2">
+                                <span class="counter" data-target="15">0</span>+
+                            </div>
+                            <div class="text-gray-400">Team<br/>Members</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#0E0E0E]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-400">Let's discuss your next big project</p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <!-- Social Media & Contact Info -->
+                <div class="lg:col-span-2 space-y-8" data-aos="fade-right">
+                    <div class="bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+                        <h3 class="text-2xl font-bold mb-8">Connect With Us</h3>
+                        
+                        <!-- Social Media Links -->
+                        <div class="space-y-6">
+                            <a href="#" class="flex items-center space-x-4 group">
+                                <div class="contact-icon">
+                                    <i class="ph ph-facebook-logo text-2xl text-[#DCF230]"></i>
+                                </div>
+                                <span class="text-gray-300 group-hover:text-[#DCF230] transition-colors">Facebook</span>
+                            </a>
+
+                            <a href="#" class="flex items-center space-x-4 group">
+                                <div class="contact-icon">
+                                    <i class="ph ph-twitter-logo text-2xl text-[#DCF230]"></i>
+                                </div>
+                                <span class="text-gray-300 group-hover:text-[#DCF230] transition-colors">Twitter</span>
+                            </a>
+
+                            <a href="#" class="flex items-center space-x-4 group">
+                                <div class="contact-icon">
+                                    <i class="ph ph-linkedin-logo text-2xl text-[#DCF230]"></i>
+                                </div>
+                                <span class="text-gray-300 group-hover:text-[#DCF230] transition-colors">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+                        <h3 class="text-2xl font-bold mb-8">Contact Info</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4 group">
+                                <div class="contact-icon">
+                                    <i class="ph ph-phone text-2xl text-[#DCF230]"></i>
+                                </div>
+                                <span class="text-gray-300">+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center space-x-4 group">
+                                <div class="contact-icon">
+                                    <i class="ph ph-envelope text-2xl text-[#DCF230]"></i>
+                                </div>
+                                <span class="text-gray-300">contact@techpro.com</span>
+                            </div>
+                            <div class="flex items-center space-x-4 group">
+                                <div class="contact-icon">
+                                    <i class="ph ph-map-pin text-2xl text-[#DCF230]"></i>
+                                </div>
+                                <span class="text-gray-300">123 Tech Street, NY 10001</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-3 bg-[#1A1A1A]/50 p-8 rounded-2xl backdrop-blur-sm border border-white/5 min-h-[600px] flex flex-col" data-aos="fade-left">
+                    <form class="flex flex-col h-full">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                                <input type="text" id="name" 
+                                    class="w-full px-4 py-3 bg-[#111111] border-none rounded-lg focus:ring-1 focus:ring-[#DCF230] focus:border-transparent transition-all text-gray-300 placeholder-gray-600"
+                                    placeholder="John Doe">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" 
+                                    class="w-full px-4 py-3 bg-[#111111] border-none rounded-lg focus:ring-1 focus:ring-[#DCF230] focus:border-transparent transition-all text-gray-300 placeholder-gray-600"
+                                    placeholder="+1 (555) 123-4567">
+                            </div>
+                        </div>
+
+                        <div class="flex-1 flex flex-col mb-8">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" 
+                                class="flex-1 w-full px-4 py-3 bg-[#111111] border-none rounded-lg focus:ring-1 focus:ring-[#DCF230] focus:border-transparent transition-all text-gray-300 placeholder-gray-600 resize-none"
+                                placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-[#DCF230] text-[#0E0E0E] py-3 rounded-lg font-medium transition-all hover:bg-opacity-90">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0E0E0E] border-t border-white/5 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="text-2xl font-bold text-[#DCF230] logo-text tracking-tighter mb-4">NovaCode</div>
+                    <p class="text-gray-400 mb-6">Transforming ideas into powerful digital solutions. Your vision, our expertise.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">
+                            <i class="ph ph-facebook-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">
+                            <i class="ph ph-twitter-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">
+                            <i class="ph ph-linkedin-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">
+                            <i class="ph ph-instagram-logo text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-[#DCF230] transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-[#DCF230] transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-[#DCF230] transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-[#DCF230] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">Mobile Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors">Cloud Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3 text-gray-400">
+                            <i class="ph ph-map-pin"></i>
+                            <span>123 Tech Street, NY 10001</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-400">
+                            <i class="ph ph-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-400">
+                            <i class="ph ph-envelope"></i>
+                            <span>contact@novacode.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/5 pt-8">
+                <!-- Copyright -->
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2024 NovaCode. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Add this right before closing body tag -->
+    <div class="custom-scrollbar-container">
+        <div class="custom-scrollbar"></div>
+    </div>
+</body>
+</html>

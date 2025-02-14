@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - NovaCode</title>
+    <!-- Same head content as index.html -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-[#0E0E0E] text-white">
+    <!-- Background Elements -->
+    <div class="grid-pattern"></div>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+
+    <!-- Navbar (same as index.html) -->
+    <nav class="fixed w-full z-50 top-4">
+        <!-- ... navbar content ... -->
+    </nav>
+
+    <!-- Hero Grid Section -->
+    <section class="min-h-screen pt-32 pb-20 relative">
+        <div class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <div class="flex items-center space-x-2 text-sm text-gray-400 mb-8" data-aos="fade-right">
+                <a href="index.html" class="hover:text-[#DCF230] transition-colors">Home</a>
+                <i class="ph ph-caret-right"></i>
+                <a href="#portfolio" class="hover:text-[#DCF230] transition-colors">Portfolio</a>
+                <i class="ph ph-caret-right"></i>
+                <span class="text-[#DCF230]">E-Commerce Platform</span>
+            </div>
+
+            <!-- Hero Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        Modern <br>
+                        E-Commerce <br>
+                        <span class="text-[#DCF230]">Platform</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 max-w-xl">
+                        A full-stack e-commerce solution with cutting-edge features and seamless user experience.
+                    </p>
+                    
+                    <!-- Tech Stack Pills -->
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-[#1A1A1A] rounded-full text-sm text-[#DCF230] border border-[#DCF230]/20">React</span>
+                        <span class="px-4 py-2 bg-[#1A1A1A] rounded-full text-sm text-[#DCF230] border border-[#DCF230]/20">Node.js</span>
+                        <span class="px-4 py-2 bg-[#1A1A1A] rounded-full text-sm text-[#DCF230] border border-[#DCF230]/20">MongoDB</span>
+                        <span class="px-4 py-2 bg-[#1A1A1A] rounded-full text-sm text-[#DCF230] border border-[#DCF230]/20">AWS</span>
+                    </div>
+                </div>
+
+                <!-- Right Image with Overlay -->
+                <div class="relative group" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-[#DCF230]/20 rounded-2xl blur-3xl group-hover:bg-[#DCF230]/30 transition-all duration-500"></div>
+                    <img src="https://placehold.co/800x600" alt="Project Hero" 
+                         class="relative rounded-2xl w-full hover:scale-[1.02] transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats Grid -->
+    <section class="py-20 bg-[#0E0E0E]/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-[#DCF230] font-semibold mb-2">Timeline</h3>
+                    <p class="text-3xl font-bold">3 Months</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-[#DCF230] font-semibold mb-2">Team Size</h3>
+                    <p class="text-3xl font-bold">8 People</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-[#DCF230] font-semibold mb-2">Client</h3>
+                    <p class="text-3xl font-bold">TechStore</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-[#DCF230] font-semibold mb-2">Role</h3>
+                    <p class="text-3xl font-bold">Full Stack</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Left Column - Overview -->
+                <div class="lg:col-span-2 space-y-12" data-aos="fade-right">
+                    <div class="bg-[#1A1A1A]/30 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+                        <h2 class="text-3xl font-bold mb-6">Project Overview</h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                        </p>
+                    </div>
+
+                    <!-- Process Timeline -->
+                    <div class="space-y-8">
+                        <h2 class="text-3xl font-bold">Development Process</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="process-card" data-aos="fade-up">
+                                <div class="text-[#DCF230] text-5xl font-bold mb-4">01</div>
+                                <h3 class="text-xl font-bold mb-2">Planning</h3>
+                                <p class="text-gray-400">Initial research and project planning phase</p>
+                            </div>
+                            <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="text-[#DCF230] text-5xl font-bold mb-4">02</div>
+                                <h3 class="text-xl font-bold mb-2">Design</h3>
+                                <p class="text-gray-400">UI/UX design and prototyping</p>
+                            </div>
+                            <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="text-[#DCF230] text-5xl font-bold mb-4">03</div>
+                                <h3 class="text-xl font-bold mb-2">Development</h3>
+                                <p class="text-gray-400">Implementation and testing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Features -->
+                <div data-aos="fade-left">
+                    <div class="bg-[#1A1A1A]/30 p-8 rounded-2xl backdrop-blur-sm border border-white/5 sticky top-24">
+                        <h2 class="text-3xl font-bold mb-6">Key Features</h2>
+                        <ul class="space-y-6">
+                            <li class="feature-item flex items-start space-x-4 group">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#DCF230]/10 flex items-center justify-center group-hover:bg-[#DCF230]/20 transition-all">
+                                    <i class="ph ph-check text-[#DCF230]"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Real-time Inventory</h3>
+                                    <p class="text-gray-400 text-sm">Automated stock management system</p>
+                                </div>
+                            </li>
+                            <!-- More feature items... -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Grid -->
+    <section class="py-20 bg-[#0E0E0E]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center">Project Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <div class="gallery-item" data-aos="fade-up">
+                        <img src="https://placehold.co/1200x800" alt="Gallery 1" 
+                             class="w-full rounded-2xl hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://placehold.co/600x400" alt="Gallery 2"
+                             class="w-full rounded-2xl hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://placehold.co/600x400" alt="Gallery 3"
+                             class="w-full rounded-2xl hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center" data-aos="fade-up">
+                <!-- Decorative Elements -->
+                <div class="flex items-center space-x-2 mb-8">
+                    <div class="w-8 h-[1px] bg-[#DCF230]/20"></div>
+                    <div class="w-2 h-2 rounded-full bg-[#DCF230]/20"></div>
+                    <div class="w-8 h-[1px] bg-[#DCF230]/20"></div>
+                </div>
+                
+                <!-- Project Counter -->
+                <div class="flex items-center space-x-4 mb-12">
+                    <span class="text-sm text-gray-400">Next Project</span>
+                    <div class="relative w-12 h-12">
+                        <div class="absolute inset-0 border border-[#DCF230]/20 rounded-full"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-[#DCF230] font-mono">02</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Next Project Link -->
+                <a href="#" class="group relative bg-[#1A1A1A]/30 rounded-2xl p-8 backdrop-blur-sm border border-white/5 
+                                  hover:border-[#DCF230]/20 transition-all duration-500 w-full max-w-4xl">
+                    <div class="flex items-center justify-between">
+                        <div class="space-y-2">
+                            <!-- Project Category -->
+                            <span class="text-sm text-[#DCF230]/70">Analytics Platform</span>
+                            
+                            <!-- Project Title -->
+                            <h2 class="text-3xl md:text-5xl font-bold group-hover:text-[#DCF230] transition-all duration-500">
+                                AI Analytics Dashboard
+                            </h2>
+                        </div>
+                        
+                        <!-- Arrow Container -->
+                        <div class="relative">
+                            <!-- Circular Background -->
+                            <div class="absolute inset-0 bg-[#DCF230]/5 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500"></div>
+                            <!-- Arrow Icon -->
+                            <div class="relative w-12 h-12 flex items-center justify-center rounded-full border border-[#DCF230]/20 
+                                      group-hover:border-[#DCF230] transition-all duration-500">
+                                <i class="ph ph-arrow-right text-2xl text-[#DCF230] transform group-hover:translate-x-1 transition-transform duration-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Preview -->
+                    <div class="mt-8 grid grid-cols-3 gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                        <div class="col-span-2 relative overflow-hidden rounded-lg">
+                            <img src="https://placehold.co/800x400" alt="Project Preview" 
+                                 class="w-full h-32 object-cover opacity-50 group-hover:opacity-70 transition-all duration-500 scale-105 group-hover:scale-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] to-transparent"></div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 rounded-full bg-[#DCF230]/40"></div>
+                                <span class="text-sm text-gray-400">React.js</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 rounded-full bg-[#DCF230]/40"></div>
+                                <span class="text-sm text-gray-400">TensorFlow</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 rounded-full bg-[#DCF230]/40"></div>
+                                <span class="text-sm text-gray-400">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Border -->
+                    <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gradient-to-r from-transparent via-[#DCF230]/30 to-transparent 
+                              group-hover:w-full transition-all duration-700"></div>
+                </a>
+
+                <!-- Decorative Dots -->
+                <div class="flex space-x-1 mt-8">
+                    <div class="w-1 h-1 rounded-full bg-[#DCF230]/20"></div>
+                    <div class="w-1 h-1 rounded-full bg-[#DCF230]/40"></div>
+                    <div class="w-1 h-1 rounded-full bg-[#DCF230]/20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0E0E0E] border-t border-white/5 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <img src="./images/nova code 1.png" alt="NovaCode Logo" class="w-8 h-8">
+                        <div class="text-2xl font-bold text-[#DCF230] logo-text tracking-tighter">NovaCode</div>
+                    </div>
+                    <p class="text-gray-400">
+                        Crafting digital experiences that inspire and innovate. Your vision, our expertise.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link group">
+                            <div class="w-10 h-10 rounded-lg bg-[#1A1A1A]/50 flex items-center justify-center border border-white/5 
+                                      group-hover:border-[#DCF230]/20 transition-all duration-300">
+                                <i class="ph ph-github-logo text-xl text-gray-400 group-hover:text-[#DCF230] transition-colors"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-link group">
+                            <div class="w-10 h-10 rounded-lg bg-[#1A1A1A]/50 flex items-center justify-center border border-white/5 
+                                      group-hover:border-[#DCF230]/20 transition-all duration-300">
+                                <i class="ph ph-twitter-logo text-xl text-gray-400 group-hover:text-[#DCF230] transition-colors"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-link group">
+                            <div class="w-10 h-10 rounded-lg bg-[#1A1A1A]/50 flex items-center justify-center border border-white/5 
+                                      group-hover:border-[#DCF230]/20 transition-all duration-300">
+                                <i class="ph ph-linkedin-logo text-xl text-gray-400 group-hover:text-[#DCF230] transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#DCF230]/40 mr-3 group-hover:bg-[#DCF230] transition-colors"></span>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#DCF230]/40 mr-3 group-hover:bg-[#DCF230] transition-colors"></span>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#DCF230]/40 mr-3 group-hover:bg-[#DCF230] transition-colors"></span>
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-[#DCF230] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#DCF230]/40 mr-3 group-hover:bg-[#DCF230] transition-colors"></span>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 group">
+                            <div class="w-10 h-10 rounded-lg bg-[#1A1A1A]/50 flex items-center justify-center border border-white/5 
+                                      group-hover:border-[#DCF230]/20 transition-all duration-300 mt-1">
+                                <i class="ph ph-map-pin text-[#DCF230]"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-gray-400">123 Tech Street</p>
+                                <p class="text-gray-400">New York, NY 10001</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 group">
+                            <div class="w-10 h-10 rounded-lg bg-[#1A1A1A]/50 flex items-center justify-center border border-white/5 
+                                      group-hover:border-[#DCF230]/20 transition-all duration-300 mt-1">
+                                <i class="ph ph-envelope text-[#DCF230]"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-gray-400">contact@novacode.com</p>
+                                <p class="text-gray-400">support@novacode.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and insights.</p>
+                    <form class="space-y-3">
+                        <div class="relative">
+                            <input type="email" placeholder="Enter your email" 
+                                   class="w-full px-4 py-3 bg-[#1A1A1A]/50 rounded-lg border border-white/5 focus:border-[#DCF230]/20 
+                                          text-gray-300 placeholder-gray-500 outline-none transition-all duration-300">
+                        </div>
+                        <button type="submit" 
+                                class="w-full px-4 py-3 bg-[#DCF230] text-black rounded-lg font-medium hover:bg-opacity-90 
+                                       transition-all duration-300 flex items-center justify-center space-x-2">
+                            <span>Subscribe</span>
+                            <i class="ph ph-paper-plane-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-white/5 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 NovaCode. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-[#DCF230] text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

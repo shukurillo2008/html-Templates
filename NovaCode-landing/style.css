@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.animate-tilt {
+    animation: tilt 10s infinite linear;
+}
+
+@keyframes tilt {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    75% {
+        transform: rotate(-1deg);
+    }
+}
+
+/* Custom scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(90deg, #DCF230, #9333EA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navbar styles */
+nav {
+    animation: navbar-float 0.5s ease;
+}
+
+.navbar-glass {
+    position: relative;
+    background: rgba(14, 14, 14, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes navbar-float {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add shimmer effect */
+@keyframes shimmer {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.nav-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(220, 242, 48, 0.05),
+        transparent
+    );
+    animation: shimmer 3s infinite;
+}
+
+/* Update the navbar scroll effect in script.js */
+
+/* Floating animation for hero image */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Service card animations */
+.service-card-hover {
+    transition: all 0.3s ease;
+}
+
+/* Service card and icon animations */
+.service-icon {
+    position: relative;
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(220, 242, 48, 0.05);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .service-icon {
+    transform: translateY(-8px);
+    background: rgba(220, 242, 48, 0.1);
+    box-shadow: 
+        0 0 20px rgba(220, 242, 48, 0.2),
+        0 0 60px rgba(220, 242, 48, 0.1);
+}
+
+/* Pulse animation for icon background */
+@keyframes iconPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 242, 48, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 242, 48, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 242, 48, 0);
+    }
+}
+
+.group:hover .service-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    animation: iconPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Icon rotation animation */
+.service-icon i {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .service-icon i {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+/* Smooth transition for all hover effects */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Contact icon animations */
+.contact-icon {
+    position: relative;
+    display: inline-flex;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background: rgba(220, 242, 48, 0.05);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .contact-icon {
+    transform: translateY(-2px);
+    background: rgba(220, 242, 48, 0.1);
+    box-shadow: 
+        0 0 15px rgba(220, 242, 48, 0.2),
+        0 0 30px rgba(220, 242, 48, 0.1);
+}
+
+@keyframes contactIconPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 242, 48, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(220, 242, 48, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 242, 48, 0);
+    }
+}
+
+.group:hover .contact-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    animation: contactIconPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.contact-icon i {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .contact-icon i {
+    transform: scale(1.1);
+}
+
+/* Form input animations */
+input:focus, textarea:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px #DCF230 !important;
+    border-color: #DCF230 !important;
+}
+
+/* Remove default focus ring */
+input, textarea {
+    outline: none !important;
+}
+
+/* Custom focus ring color for Webkit browsers */
+input:focus-visible, textarea:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px #DCF230 !important;
+}
+
+/* For Firefox */
+input::-moz-focus-inner, textarea::-moz-focus-inner {
+    border: 0;
+}
+
+/* Remove default ring color from Tailwind */
+[type='text']:focus,
+[type='tel']:focus,
+textarea:focus {
+    --tw-ring-color: transparent !important;
+    --tw-ring-offset-shadow: none !important;
+    --tw-ring-shadow: none !important;
+    box-shadow: 0 0 0 2px #DCF230 !important;
+}
+
+/* Stats icon animations */
+.stats-icon {
+    position: relative;
+    display: inline-flex;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: rgba(220, 242, 48, 0.05);
+    transition: all 0.3s ease;
+}
+
+.group:hover .stats-icon {
+    transform: translateY(-2px);
+    background: rgba(220, 242, 48, 0.1);
+}
+
+/* Counter animation */
+.counter {
+    display: inline-block;
+    animation: countUp 1s ease-out forwards;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Stats Styles */
+.stats-icon-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 1.5rem;
+    background: linear-gradient(45deg, #DCF230, rgba(147, 51, 234, 0.5));
+    opacity: 0.2;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .stats-icon-ring {
+    opacity: 0.4;
+    transform: scale(1.1);
+}
+
+.stats-icon {
+    position: relative;
+    display: inline-flex;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background: rgba(220, 242, 48, 0.05);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+}
+
+.group:hover .stats-icon {
+    transform: translateY(-5px) scale(1.1);
+    background: rgba(220, 242, 48, 0.1);
+    box-shadow: 
+        0 0 30px rgba(220, 242, 48, 0.2),
+        0 0 60px rgba(220, 242, 48, 0.1);
+}
+
+/* Floating animation for stats icons */
+.stats-icon i {
+    animation: floatingIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatingIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Gradient border effect */
+.stats-icon::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(45deg, #DCF230, rgba(147, 51, 234, 0.5));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.group:hover .stats-icon::before {
+    opacity: 1;
+}
+
+/* Footer styles */
+footer a {
+    display: inline-block;
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #DCF230;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+footer .social-links a::after {
+    display: none;
+}
+
+/* Scrollspy styles */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #DCF230;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.text-[#DCF230]::after {
+    width: 100%;
+}
+
+/* Smooth transition for link colors */
+nav a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    transform: translateY(-1px);
+}
+
+/* Custom Scrollbar Styles */
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(220, 242, 48, 0.15);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(220, 242, 48, 0.4);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(220, 242, 48, 0.15) transparent;
+}
+
+/* Custom Scrollbar Container */
+.custom-scrollbar-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.custom-scrollbar-container:hover {
+    opacity: 1;
+}
+
+.custom-scrollbar {
+    position: absolute;
+    right: 9px;
+    width: 6px;
+    background: rgba(220, 242, 48, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+}
+
+.custom-scrollbar:hover,
+.custom-scrollbar.active {
+    width: 8px;
+    right: 8px;
+    background: rgba(220, 242, 48, 0.4);
+    box-shadow: 
+        0 0 10px rgba(220, 242, 48, 0.2),
+        0 0 20px rgba(220, 242, 48, 0.1);
+}
+
+/* Hide default scrollbar when custom is active */
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+body {
+    scrollbar-width: none;
+}
+
+/* Futuristic Background Elements */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+        linear-gradient(to bottom right, rgba(220, 242, 48, 0.03), transparent 40%),
+        linear-gradient(to top left, rgba(147, 51, 234, 0.03), transparent 40%);
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* Animated Grid Pattern */
+.grid-pattern {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(220, 242, 48, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(220, 242, 48, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
+    mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
+    opacity: 0.3;
+    z-index: -1;
+    animation: gridFloat 15s linear infinite;
+}
+
+/* Floating Orbs */
+.floating-orb {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.orb-1 {
+    background: #DCF230;
+    top: 10%;
+    left: 5%;
+    animation: orbFloat 20s ease-in-out infinite;
+}
+
+.orb-2 {
+    background: rgba(147, 51, 234, 0.5);
+    bottom: 10%;
+    right: 5%;
+    animation: orbFloat 25s ease-in-out infinite reverse;
+}
+
+@keyframes gridFloat {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(40px);
+    }
+}
+
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 50px);
+    }
+    50% {
+        transform: translate(0, 100px);
+    }
+    75% {
+        transform: translate(-50px, 50px);
+    }
+}
+
+/* Project Detail Styles */
+.project-gallery img {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Breadcrumb hover effect */
+.breadcrumb-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-item:hover {
+    color: #DCF230;
+}
+
+/* Feature list animation */
+.feature-item {
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(8px);
+}
+
+/* Modern Next Project Styles */
+.next-project-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.next-project-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(220, 242, 48, 0.2),
+        transparent
+    );
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.next-project-link:hover::before {
+    transform: scaleX(1);
+}
+
+/* Project Detail Specific Styles */
+.stat-card {
+    @apply bg-[#1A1A1A]/30 p-8 rounded-2xl backdrop-blur-sm border border-white/5 
+           hover:border-[#DCF230]/20 transition-all duration-300;
+}
+
+.process-card {
+    @apply bg-[#1A1A1A]/30 p-8 rounded-2xl backdrop-blur-sm border border-white/5 
+           hover:border-[#DCF230]/20 transition-all duration-300 hover:transform hover:-translate-y-2;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.feature-item {
+    @apply transition-all duration-300 hover:transform hover:translate-x-2;
+}
+
+/* Modern Footer Styles */
+.social-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(220, 242, 48, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+/* Newsletter Input Focus Effect */
+.newsletter-input:focus {
+    box-shadow: 0 0 0 2px rgba(220, 242, 48, 0.2);
+}
+
+/* Footer Link Hover Effect */
+.footer-link {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #DCF230;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
