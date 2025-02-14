@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shukurillo Isroilov - Back-end Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            catalyst: {
+              dark: '#181A1B',
+              light: '#FFFFFF',
+              secondary: '#24272B',
+              accent: '#374151',
+              text: '#E4E7EB',
+              gray: '#A0AEC0',
+              success: '#32D583',
+              border: '#2D3748'
+            },
+          },
+          fontFamily: {
+            'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+            'display': ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif']
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-catalyst-dark text-catalyst-text font-sans">
+  <div class="container mx-auto px-4 py-8 md:py-12 lg:py-20 xl:py-24">
+    <!-- Hero Section -->
+    <div class="desktop-tracker section-tracker"> <!-- Desktop Tracker -->
+        <a href="#hero"><i class="fas fa-home mr-2"></i> Hero</a>
+        <a href="#about"><i class="fas fa-user mr-2"></i> About</a>
+        <a href="#skills"><i class="fas fa-tools mr-2"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-folder-open mr-2"></i> Projects</a>
+        <a href="#contact"><i class="fas fa-envelope mr-2"></i> Contact</a>
+    </div>
+
+    <!-- Mobile Tracker (Hamburger Menu) -->
+    <div class="mobile-tracker">
+      <button class="mobile-tracker-button" id="mobile-tracker-toggle" aria-label="Toggle Section Navigation">
+        <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+      </button>
+      <div class="mobile-tracker-links" id="mobile-tracker-links">
+        <a href="#hero"><i class="fas fa-home mr-2"></i> Hero</a>
+        <a href="#about"><i class="fas fa-user mr-2"></i> About</a>
+        <a href="#skills"><i class="fas fa-tools mr-2"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-folder-open mr-2"></i> Projects</a>
+        <a href="#contact"><i class="fas fa-envelope mr-2"></i> Contact</a>
+      </div>
+    </div>
+
+
+    <section id="hero" class="mb-16 md:mb-20 lg:mb-24 xl:mb-28 hero-bg pb-20 md:pb-24 lg:pb-28 xl:pb-32 animate-fade-in">
+      <div class="pt-12 md:pt-16 lg:pt-20 xl:pt-24 text-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s" alt="Profile Picture" class="rounded-full w-28 h-28 md:w-32 md:h-32 mx-auto mb-5 md:mb-6 border-2 md:border-4 border-catalyst-border transition-transform duration-300 hover:scale-105 shadow-md">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold mb-3 md:mb-4 text-catalyst-light">Shukurillo Isroilov <span class="text-catalyst-success">| Back-end Developer</span></h1>
+        <p class="text-catalyst-gray text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
+          Crafting scalable and efficient backend systems using Python, Django, and modern RESTful architectures.
+        </p>
+        <div class="flex justify-center space-x-4 md:space-x-6">
+          <a href="mailto:your.email@example.com" class="text-catalyst-text hover:text-catalyst-light transition-colors duration-200"><i class="fa fa-envelope mr-2"></i> Email</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="text-catalyst-text hover:text-catalyst-light transition-colors duration-200"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-catalyst-text hover:text-catalyst-light transition-colors duration-200"><i class="fab fa-github mr-2"></i> GitHub</a>
+          <a href="/your-resume.pdf" target="_blank" rel="noopener noreferrer" class="text-catalyst-success hover:text-green-400 transition-colors duration-200 font-semibold"><i class="fa fa-file-pdf mr-2"></i> Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="mb-16 md:mb-20 lg:mb-24 xl:mb-28 animate-fade-in">
+      <div class="bg-catalyst-secondary rounded-lg p-8 md:p-10 lg:p-12 transition-shadow duration-200 hover:shadow-md">
+        <h2 class="text-2xl md:text-3xl font-display font-semibold mb-5 md:mb-6 relative">
+          About Me <span class="absolute left-0 bottom-0 h-0.5 w-12 md:w-16 bg-catalyst-success"></span>
+        </h2>
+        <p class="text-catalyst-gray leading-relaxed">
+          I am a back-end developer with 2.5 years of experience specializing in designing and building scalable, high-performance systems.
+        </p>
+        <p class="text-catalyst-gray leading-relaxed mt-5 md:mt-6">
+          I have contributed to large-scale projects across multiple companies, integrating secure and efficient solutions that power dynamic web applications.
+        </p>
+        <p class="text-catalyst-gray leading-relaxed mt-5 md:mt-6">
+          I am passionate about backend architecture, clean code practices, and continuous learning to stay updated with the latest industry trends.
+        </p>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-16 md:mb-20 lg:mb-24 xl:mb-28 animate-fade-in">
+      <div class="bg-catalyst-secondary rounded-lg p-8 md:p-10 lg:p-12 transition-shadow duration-200 hover:shadow-md">
+        <h2 class="text-2xl md:text-3xl font-display font-semibold mb-6 md:mb-8 relative">
+          Core Expertise <span class="absolute left-0 bottom-0 h-0.5 w-12 md:w-16 bg-catalyst-success"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div class="p-2">
+            <h3 class="font-semibold mb-3 text-catalyst-text">
+              <i class="fas fa-server text-catalyst-success mr-2"></i> Backend Development & API Design
+            </h3>
+            <ul class="list-none pl-0 text-catalyst-gray">
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fab fa-python text-catalyst-accent mr-2"></i> Python & Django</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-code text-catalyst-accent mr-2"></i> Django REST Framework</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-project-diagram text-catalyst-accent mr-2"></i> Microservices Architecture</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-bolt text-catalyst-accent mr-2"></i> Performance Optimization</li>
+              <li class="flex items-center"><i class="fas fa-robot text-catalyst-accent mr-2"></i> Asynchronous Processing (Aiogram)</li>
+            </ul>
+          </div>
+          <div class="p-2">
+            <h3 class="font-semibold mb-3 text-catalyst-text">
+              <i class="fas fa-database text-catalyst-success mr-2"></i> Database & Data Modeling
+            </h3>
+            <ul class="list-none pl-0 text-catalyst-gray">
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-database text-catalyst-accent mr-2"></i> SQL (PostgreSQL, MySQL)</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-link text-catalyst-accent mr-2"></i> ORM Frameworks (Django ORM, SQLAlchemy)</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-chart-line text-catalyst-accent mr-2"></i> Query Optimization & Data Integrity</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-sync-alt text-catalyst-accent mr-2"></i> Data Migration & Versioning</li>
+              <li class="flex items-center"><i class="fas fa-memory text-catalyst-accent mr-2"></i> Caching Strategies (Redis)</li>
+            </ul>
+          </div>
+          <div class="p-2">
+            <h3 class="font-semibold mb-3 text-catalyst-text">
+              <i class="fas fa-tools text-catalyst-success mr-2"></i> Tools & Workflow
+            </h3>
+            <ul class="list-none pl-0 text-catalyst-gray">
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fab fa-git-alt text-catalyst-accent mr-2"></i> Git & Version Control</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fab fa-docker text-catalyst-accent mr-2"></i> Docker & Containerization</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fas fa-sync text-catalyst-accent mr-2"></i> CI/CD Pipelines</li>
+              <li class="mb-1 md:mb-2 flex items-center"><i class="fab fa-linux text-catalyst-accent mr-2"></i> Linux & Cloud Deployment</li>
+              <li class="flex items-center"><i class="fas fa-vial text-catalyst-accent mr-2"></i> Automated Testing & Debugging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mb-16 md:mb-20 lg:mb-24 xl:mb-28 animate-fade-in">
+      <h2 class="text-2xl md:text-3xl font-display font-semibold mb-6 md:mb-8 text-center md:text-left relative">
+        Featured Projects <span class="absolute left-0 bottom-0 h-0.5 w-12 md:w-16 bg-catalyst-success"></span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="project-card bg-catalyst-secondary rounded-lg overflow-hidden shadow-md transition-transform duration-200 transform hover:scale-102 hover:shadow-lg hover:-translate-y-1">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Scalable E-commerce API Project Thumbnail" class="w-full h-48 object-cover">
+            <div class="project-image-overlay">
+              <p>E-commerce API</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg md:text-xl mb-2 md:mb-3 text-catalyst-text">Scalable E-commerce API</h3>
+            <p class="text-catalyst-gray mb-3 md:mb-4 text-sm md:text-base">
+              Developed a RESTful API using Django and the Django REST Framework to support an online store with 10,000+ concurrent users.
+            </p>
+            <div class="flex flex-wrap space-x-2 mb-3 md:mb-4">
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">Django</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">DRF</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">REST API</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">Caching</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://live-demo-url-1.com" target="_blank" rel="noopener noreferrer" class="text-catalyst-success hover:text-green-400 transition-colors duration-200 font-semibold text-sm md:text-base"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+              <a href="https://github.com/yourusername/project-repo-1" target="_blank" rel="noopener noreferrer" class="text-catalyst-text hover:text-catalyst-light transition-colors duration-200 text-sm md:text-base"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card bg-catalyst-secondary rounded-lg overflow-hidden shadow-md transition-transform duration-200 transform hover:scale-102 hover:shadow-lg hover:-translate-y-1">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Real-Time Chat Service Project Thumbnail" class="w-full h-48 object-cover">
+            <div class="project-image-overlay">
+              <p>Real-Time Chat</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg md:text-xl mb-2 md:mb-3 text-catalyst-text">Real-Time Chat Service</h3>
+            <p class="text-catalyst-gray mb-3 md:mb-4 text-sm md:text-base">
+              Engineered a WebSocket-based chat service with asynchronous capabilities using Python.
+            </p>
+            <div class="flex flex-wrap space-x-2 mb-3 md:mb-4">
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">Python</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">WebSocket</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">Asynchronous</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://live-demo-url-2.com" target="_blank" rel="noopener noreferrer" class="text-catalyst-success hover:text-green-400 transition-colors duration-200 font-semibold text-sm md:text-base"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+              <a href="https://github.com/yourusername/project-repo-2" target="_blank" rel="noopener noreferrer" class="text-catalyst-text hover:text-catalyst-light transition-colors duration-200 text-sm md:text-base"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card bg-catalyst-secondary rounded-lg overflow-hidden shadow-md transition-transform duration-200 transform hover:scale-102 hover:shadow-lg hover:-translate-y-1">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Data Aggregation Service Project Thumbnail" class="w-full h-48 object-cover">
+            <div class="project-image-overlay">
+              <p>Data Aggregation</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg md:text-xl mb-2 md:mb-3 text-catalyst-text">Data Aggregation Service</h3>
+            <p class="text-catalyst-gray mb-3 md:mb-4 text-sm md:text-base">
+              Built a high-performance data aggregation service in Python that integrates data from multiple external sources.
+            </p>
+            <div class="flex flex-wrap space-x-2 mb-3 md:mb-4">
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">Python</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">SQLAlchemy</span>
+              <span class="inline-block bg-catalyst-border text-catalyst-gray px-2 py-1 rounded-full text-xs md:text-sm font-semibold mb-1">Data Processing</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://live-demo-url-3.com" target="_blank" rel="noopener noreferrer" class="text-catalyst-success hover:text-green-400 transition-colors duration-200 font-semibold text-sm md:text-base"><i class="fas fa-external-link-alt mr-1"></i> Live Demo</a>
+              <a href="https://github.com/yourusername/project-repo-3" target="_blank" rel="noopener noreferrer" class="text-catalyst-text hover:text-catalyst-light transition-colors duration-200 text-sm md:text-base"><i class="fab fa-github mr-1"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <div class="section-separator"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mb-16 md:mb-20 lg:mb-24 xl:mb-28 animate-fade-in">
+      <div class="contact-bg bg-catalyst-secondary/90 rounded-lg p-8 md:p-10 lg:p-12 transition-shadow duration-200 hover:shadow-md">
+        <h2 class="text-2xl md:text-3xl font-display font-semibold mb-5 md:mb-6 text-center relative">
+          Get In Touch <span class="absolute left-1/2 bottom-0 h-0.5 w-12 md:w-16 bg-catalyst-success -translate-x-1/2"></span>
+        </h2>
+        <p class="text-catalyst-gray text-center mb-8 md:mb-10 text-base md:text-lg leading-relaxed">
+          I'm actively seeking new opportunities and collaborations. Let's discuss how my expertise in back-end development can power your next project.
+        </p>
+        
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <!-- Left Column - Social Links -->
+          <div class="flex flex-col justify-center space-y-4">
+            <h3 class="text-xl font-semibold text-catalyst-text mb-4">Connect With Me</h3>
+            <a href="mailto:your.email@example.com" class="flex items-center px-6 py-4 bg-catalyst-dark border border-catalyst-border rounded-lg hover:border-catalyst-success transition-all duration-200 group">
+              <i class="fa fa-envelope text-catalyst-success mr-3 text-xl group-hover:scale-110 transition-transform duration-200"></i>
+              <div class="flex flex-col">
+                <span class="text-catalyst-text font-medium">Email</span>
+                <span class="text-catalyst-gray text-sm">your.email@example.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-4 bg-catalyst-dark border border-catalyst-border rounded-lg hover:border-catalyst-success transition-all duration-200 group">
+              <i class="fab fa-linkedin text-catalyst-success mr-3 text-xl group-hover:scale-110 transition-transform duration-200"></i>
+              <div class="flex flex-col">
+                <span class="text-catalyst-text font-medium">LinkedIn</span>
+                <span class="text-catalyst-gray text-sm">linkedin.com/in/yourprofile</span>
+              </div>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-4 bg-catalyst-dark border border-catalyst-border rounded-lg hover:border-catalyst-success transition-all duration-200 group">
+              <i class="fab fa-github text-catalyst-success mr-3 text-xl group-hover:scale-110 transition-transform duration-200"></i>
+              <div class="flex flex-col">
+                <span class="text-catalyst-text font-medium">GitHub</span>
+                <span class="text-catalyst-gray text-sm">github.com/yourusername</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Right Column - Contact Form -->
+          <div class="md:border-l md:border-catalyst-border md:pl-8 lg:pl-12">
+            <h3 class="text-xl font-semibold text-catalyst-text mb-6">Send a Message</h3>
+            <form id="contact-form" class="space-y-6" onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="Your Email"
+                  class="w-full px-6 py-3 bg-catalyst-dark border border-catalyst-border rounded-lg focus:outline-none focus:border-catalyst-success focus:ring-1 focus:ring-catalyst-success transition-all duration-200 text-catalyst-text placeholder-catalyst-gray/50"
+                  maxlength="100"
+                  required
+                >
+              </div>
+              
+              <div class="form-group">
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  placeholder="Your Message"
+                  class="w-full px-6 py-3 bg-catalyst-dark border border-catalyst-border rounded-lg focus:outline-none focus:border-catalyst-success focus:ring-1 focus:ring-catalyst-success transition-all duration-200 text-catalyst-text placeholder-catalyst-gray/50 resize-none"
+                  maxlength="500"
+                  required
+                ></textarea>
+                <div class="flex justify-end mt-2">
+                  <span id="char-count" class="text-sm text-catalyst-gray/70">0/500</span>
+                </div>
+              </div>
+
+              <div>
+                <button 
+                  type="submit" 
+                  class="w-full bg-gradient-to-r from-catalyst-success to-green-500 hover:from-green-500 hover:to-catalyst-success text-catalyst-dark font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-102 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-catalyst-success focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Send Message <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-catalyst-gray py-6 md:py-8 border-t border-catalyst-border text-sm">
+      <p>© 2023 Shukurillo Isroilov. Crafted with <i class="fa fa-heart text-red-500"></i> and Tailwind CSS.</p>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

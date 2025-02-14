@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce API - Project Detail | Shukurillo Isroilov</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            catalyst: {
+              dark: '#181A1B',
+              light: '#FFFFFF',
+              secondary: '#24272B',
+              accent: '#374151',
+              text: '#E4E7EB',
+              gray: '#A0AEC0',
+              success: '#32D583',
+              border: '#2D3748'
+            },
+          },
+          fontFamily: {
+            'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+            'display': ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif']
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-catalyst-dark text-catalyst-text font-sans">
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 bg-catalyst-dark/90 backdrop-blur-md z-50 border-b border-catalyst-border">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="projects.html" class="flex items-center gap-2 text-catalyst-text hover:text-catalyst-success transition-colors">
+          <i class="fas fa-arrow-left"></i>
+          <span>Back to Projects</span>
+        </a>
+        <div class="flex items-center gap-6">
+          <a href="google-gemini.html" class="text-catalyst-success hover:text-green-400 transition-colors">
+            <i class="fas fa-home"></i>
+            <span class="ml-2">Home</span>
+          </a>
+          <a href="google-gemini.html#contact" class="text-catalyst-text hover:text-catalyst-light transition-colors">
+            <i class="fas fa-envelope"></i>
+            <span class="ml-2">Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 pt-24 pb-16">
+    <!-- Project Header -->
+    <header class="mb-12">
+      <div class="relative h-96 rounded-xl overflow-hidden mb-8">
+        <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2070" 
+             alt="E-commerce API Project" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-catalyst-dark via-catalyst-dark/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="inline-block bg-catalyst-success/20 text-catalyst-success px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Backend Development
+          </span>
+          <h1 class="text-4xl md:text-5xl font-display font-bold text-catalyst-light mb-4">
+            Scalable E-commerce API
+          </h1>
+          <p class="text-lg text-catalyst-gray max-w-3xl">
+            A high-performance RESTful API built with Django and DRF, handling 10,000+ concurrent users.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main Content -->
+      <div class="lg:col-span-2">
+        <!-- Overview Section -->
+        <section class="bg-catalyst-secondary rounded-xl p-8 mb-8">
+          <h2 class="text-2xl font-display font-semibold mb-6">Project Overview</h2>
+          <div class="prose prose-invert max-w-none">
+            <p class="text-catalyst-gray mb-4">
+              This e-commerce API was developed to handle high-traffic scenarios while maintaining optimal performance. 
+              The system is designed with scalability in mind, utilizing modern caching strategies and database optimization techniques.
+            </p>
+            <p class="text-catalyst-gray mb-4">
+              The API serves as the backbone for multiple client applications, processing thousands of transactions daily 
+              while ensuring data consistency and system reliability.
+            </p>
+            <p class="text-catalyst-gray">
+              Key achievements include reducing average response time by 60% and implementing a robust security system 
+              that prevents common API vulnerabilities.
+            </p>
+          </div>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="bg-catalyst-secondary rounded-xl p-8 mb-8">
+          <h2 class="text-2xl font-display font-semibold mb-6">Technical Implementation</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Architecture</h3>
+              <p class="text-catalyst-gray mb-4">
+                The system follows a microservices architecture pattern, with separate services for:
+              </p>
+              <ul class="list-disc list-inside text-catalyst-gray space-y-2 ml-4">
+                <li>Authentication and Authorization</li>
+                <li>Product Management</li>
+                <li>Order Processing</li>
+                <li>Payment Integration</li>
+                <li>Analytics and Reporting</li>
+              </ul>
+            </div>
+
+            <!-- Code Snippet Example -->
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Code Implementation</h3>
+              <div class="bg-catalyst-dark rounded-lg p-4">
+                <pre class="text-sm text-catalyst-text overflow-x-auto"><code>
+# Example of the Product API ViewSet
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    
+    @action(detail=True, methods=['post'])
+    def update_stock(self, request, pk=None):
+        product = self.get_object()
+        serializer = StockUpdateSerializer(data=request.data)
+        
+        if serializer.is_valid():
+            product.update_stock(
+                quantity=serializer.validated_data['quantity']
+            )
+            return Response({'status': 'stock updated'})
+        return Response(serializer.errors, 
+                      status=status.HTTP_400_BAD_REQUEST)
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Challenges and Solutions -->
+        <section class="bg-catalyst-secondary rounded-xl p-8">
+          <h2 class="text-2xl font-display font-semibold mb-6">Challenges & Solutions</h2>
+          <div class="space-y-6">
+            <div class="border-l-4 border-catalyst-success pl-4">
+              <h3 class="text-xl font-semibold mb-2">Performance at Scale</h3>
+              <p class="text-catalyst-gray">
+                Implemented Redis caching and database query optimization to handle high concurrent users.
+                Result: 60% reduction in average response time.
+              </p>
+            </div>
+            <div class="border-l-4 border-catalyst-success pl-4">
+              <h3 class="text-xl font-semibold mb-2">Data Consistency</h3>
+              <p class="text-catalyst-gray">
+                Developed a robust transaction management system using Django's transaction atomic decorators.
+                Result: Zero data inconsistencies in production.
+              </p>
+            </div>
+            <div class="border-l-4 border-catalyst-success pl-4">
+              <h3 class="text-xl font-semibold mb-2">Security</h3>
+              <p class="text-catalyst-gray">
+                Implemented JWT authentication and role-based access control.
+                Result: Enhanced security with no reported vulnerabilities.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1 space-y-8">
+        <!-- Project Info Card -->
+        <div class="bg-catalyst-secondary rounded-xl p-6">
+          <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-sm font-semibold text-catalyst-gray">Timeline</h4>
+              <p class="text-catalyst-text">3 months</p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-catalyst-gray">Role</h4>
+              <p class="text-catalyst-text">Lead Backend Developer</p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-catalyst-gray">Team Size</h4>
+              <p class="text-catalyst-text">4 developers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="bg-catalyst-secondary rounded-xl p-6">
+          <h3 class="text-xl font-semibold mb-4">Technologies Used</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">Django</span>
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">DRF</span>
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">PostgreSQL</span>
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">Redis</span>
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">Docker</span>
+            <span class="px-3 py-1 bg-catalyst-accent rounded-full text-sm">Nginx</span>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="bg-catalyst-secondary rounded-xl p-6">
+          <h3 class="text-xl font-semibold mb-4">Project Links</h3>
+          <div class="space-y-4">
+            <a href="#" class="flex items-center gap-2 text-catalyst-success hover:text-green-400 transition-colors">
+              <i class="fas fa-external-link-alt"></i>
+              <span>Live Demo</span>
+            </a>
+            <a href="#" class="flex items-center gap-2 text-catalyst-text hover:text-catalyst-light transition-colors">
+              <i class="fab fa-github"></i>
+              <span>Source Code</span>
+            </a>
+            <a href="#" class="flex items-center gap-2 text-catalyst-text hover:text-catalyst-light transition-colors">
+              <i class="fas fa-book"></i>
+              <span>Documentation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-catalyst-border">
+    <div class="container mx-auto px-4 py-8">
+      <div class="text-center text-catalyst-gray">
+        <p>© 2023 Shukurillo Isroilov. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html> 
