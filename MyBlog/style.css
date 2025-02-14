@@ -1,0 +1,868 @@
+/* Custom styles for smooth transitions */
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+/* Search overlay animation - enhanced */
+#searchOverlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#searchOverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#searchOverlay .bg-white {
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#searchOverlay.active .bg-white {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Hamburger menu animation - enhanced */
+.hamburger-line {
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    left: 0;
+}
+
+.hamburger-line::before {
+    transform: translateY(-8px);
+}
+
+.hamburger-line::after {
+    transform: translateY(8px);
+}
+
+/* Active hamburger state */
+.hamburger-active .hamburger-line {
+    background-color: transparent;
+}
+
+.hamburger-active .hamburger-line::before {
+    transform: rotate(45deg);
+}
+
+.hamburger-active .hamburger-line::after {
+    transform: rotate(-45deg);
+}
+
+/* Mobile menu animation - enhanced */
+#mobileMenu {
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+
+#mobileMenu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Post card animations */
+.grid {
+    transition: opacity 0.3s ease;
+}
+
+.group {
+    transition: transform 0.3s ease;
+}
+
+.group:hover {
+    transform: translateY(-5px);
+}
+
+/* Filter menu animations */
+#filterMenu {
+    transform-origin: top right;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0;
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#filterMenu:not(.hidden) {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Checkbox styles */
+.form-checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin-right: 8px;
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.form-checkbox:checked {
+    background-color: #000;
+}
+
+.form-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Post card hover effects */
+.group img {
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.group:hover img {
+    transform: scale(1.05);
+}
+
+/* Add these new styles for search functionality */
+#searchResults {
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#searchResults.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.search-result-item {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.search-result-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhance the search input animation */
+#searchInput {
+    transition: all 0.3s ease;
+    border-color: transparent;
+}
+
+#searchInput:focus {
+    border-color: #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Loading indicator animation */
+.search-loading {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #eee;
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add these new animation styles */
+
+/* General button click animation */
+button {
+    transform: translateY(0);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Pagination button animations */
+.pagination-btn {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pagination-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pagination-btn:active {
+    transform: translateY(1px);
+}
+
+/* Card click animation */
+.group {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.group:active {
+    transform: scale(0.98);
+}
+
+/* Filter menu item animation */
+.filter-item {
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.filter-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateX(4px);
+}
+
+.filter-item:last-child {
+    margin-bottom: 0;
+}
+
+.filter-item input[type="checkbox"] {
+    transition: all 0.2s ease;
+}
+
+/* Sort select animation */
+select {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ripple effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.1);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Featured Slider Styles */
+.featured-slider {
+    height: 60vh;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.slider-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slider-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.slider-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+/* Fix navigation buttons */
+.slider-nav {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.featured-slider:hover .slider-nav {
+    opacity: 1;
+}
+
+.slider-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-nav.prev {
+    left: 20px;
+}
+
+.slider-nav.next {
+    right: 20px;
+}
+
+/* Improve dots navigation */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider-dots button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dots button.active {
+    width: 24px;
+    border-radius: 4px;
+    background: white;
+}
+
+/* Slide Content Animation */
+.slide-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
+}
+
+.slider-slide.active .slide-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Newsletter section animations */
+.newsletter-input {
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Back to Top button */
+#backToTop {
+    z-index: 49;
+    transform: translateY(20px);
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    transform: translateY(-2px);
+}
+
+/* Dark mode styles */
+.dark {
+    color-scheme: dark;
+}
+
+.dark body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark .bg-white {
+    background-color: #2a2a2a;
+}
+
+.dark .text-black {
+    color: #ffffff;
+}
+
+.dark .border-gray-200 {
+    border-color: #404040;
+}
+
+.dark .bg-gray-50 {
+    background-color: #333333;
+}
+
+.dark .text-gray-600 {
+    color: #d1d1d1;
+}
+
+/* Enhanced dark mode with borders */
+.dark .article-content {
+    border: 1px solid #404040;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.dark .code-block {
+    border: 1px solid #404040;
+    background-color: #2a2a2a;
+}
+
+.dark .author-bio {
+    border: 1px solid #404040;
+    background-color: #2a2a2a;
+}
+
+.dark .comment {
+    border: 1px solid #404040;
+    background-color: #2a2a2a;
+}
+
+.dark .comment-form textarea {
+    border-color: #404040;
+    background-color: #2a2a2a;
+}
+
+.dark .lightbox-image {
+    border: 1px solid #404040;
+}
+
+/* Hover states for dark mode */
+.dark .comment-form textarea:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.dark .social-share-btn:hover {
+    border-color: #666;
+    background-color: #333;
+}
+
+/* Social share buttons */
+.social-share-btn {
+    @apply w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors;
+}
+
+.dark .social-share-btn {
+    @apply bg-gray-800 hover:bg-gray-700;
+}
+
+/* Clap button animation */
+.clap-ripple {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 50%;
+    animation: ripple 1s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* Comments animation */
+.comment {
+    transition: all 0.3s ease;
+}
+
+/* Code block styles */
+.code-block {
+    position: relative;
+}
+
+.dark .code-block {
+    background-color: #2a2a2a;
+}
+
+.copy-btn {
+    transition: all 0.3s ease;
+}
+
+/* Lightbox animations */
+#lightbox {
+    transition: opacity 0.3s ease;
+}
+
+#lightbox img {
+    transition: transform 0.3s ease;
+}
+
+#lightbox.flex img {
+    transform: scale(1);
+}
+
+/* Article content styles */
+.article-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.article-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Related posts hover effects */
+.related-post {
+    transition: transform 0.3s ease;
+}
+
+.related-post:hover {
+    transform: translateY(-4px);
+}
+
+/* Navigation hover effects */
+.prev-next-link {
+    transition: all 0.3s ease;
+}
+
+.prev-next-link:hover {
+    transform: translateX(4px);
+}
+
+/* Dark mode transition */
+body,
+.bg-white,
+.text-black,
+.border-gray-200,
+.bg-gray-50,
+.text-gray-600 {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Animations */
+
+/* Header image animation */
+.article-header-image {
+    transform: scale(1.02);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article-header-image:hover {
+    transform: scale(1);
+}
+
+/* Title entrance animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-title {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Social share buttons hover animation */
+.social-share-btn {
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-share-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced clap button animation */
+.clap-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clap-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Comment form animation */
+.comment-form textarea {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-form textarea:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced comment animation */
+@keyframes commentSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.comment {
+    animation: commentSlideIn 0.5s ease-out forwards;
+}
+
+/* Code block hover effect */
+.code-block {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.code-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Author bio hover animation */
+.author-bio {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.author-bio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode specific animations */
+.dark .code-block:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    background-color: #333;
+    border-color: #555;
+}
+
+.dark .author-bio:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    background-color: #333;
+    border-color: #555;
+}
+
+/* Enhanced dark mode hover effects */
+.dark .social-share-btn:hover {
+    background-color: #333;
+    border-color: #555;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .comment:hover {
+    background-color: #333;
+    border-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .clap-button:hover {
+    background-color: #333 !important;
+    border-color: #555 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .comment-form textarea:focus {
+    background-color: #333;
+    border-color: #666;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark button[type="submit"]:hover {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .article-header-image:hover {
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.15);
+}
+
+.dark #darkModeToggle:hover {
+    background-color: #333;
+    border-color: #555;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .prev-next-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode card hover effects */
+.dark .group:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .group:hover img {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark .group:hover h3 {
+    color: #fff;
+}
+
+/* Lightbox enhanced animation */
+@keyframes lightboxIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#lightbox.flex {
+    animation: lightboxIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Navigation links animation */
+.prev-next-link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prev-next-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.prev-next-link:hover::after {
+    width: 100%;
+}
+
+/* Dark mode toggle animation */
+#darkModeToggle {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#darkModeToggle i {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#darkModeToggle:hover {
+    transform: rotate(8deg);
+}
+
+/* Dark mode transition overlay */
+.mode-transition-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at var(--x) var(--y), 
+        transparent 0%,
+        rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .mode-transition-overlay {
+    background: radial-gradient(circle at var(--x) var(--y), 
+        transparent 0%,
+        rgba(255, 255, 255, 0.7) 100%);
+}
+
+/* Enhanced dark mode transitions */
+.dark-mode-transition * {
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
